@@ -1,16 +1,32 @@
-// import '@/styles/globals.css'
-import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+'use client';
+import '@/styles/globals.css'
+import { useAuth, SignInButton, SignUpButton, SignedIn, SignedOut, UserButton, RedirectToUserProfile } from '@clerk/nextjs'
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+import DashboardPage from "./DashboardPage";
 
 function MyApp() {
+  const { user } = useAuth();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (user && !user?.sessionClaims?.publicMetadata.onboardingComplete) {
+      router.push('/onboarding');
+    }
+  }, [user, router]);
   return (
-    <ClerkProvider frontendApi={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
+      <main>
         <SignedOut>
-          <SignInButton />
+          <h1>Welcome to HumbleHR</h1>
+          <SignInButton className="button" />
+          <SignUpButton  className="button"/>
         </SignedOut>
         <SignedIn>
-          <UserButton />
+          <UserButton/>
+          <DashboardPage/>
+        {/* <RedirectToUserProfile /> */}
         </SignedIn>
-    </ClerkProvider>
+      </main>
   )
 }
 

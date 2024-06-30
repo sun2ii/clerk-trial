@@ -80,6 +80,9 @@ form input {
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
+  margin: 10px 0; /* Add margin to separate buttons */
+  width: 100%; /* Make buttons full width */
+  max-width: 200px; /* Limit max width of buttons */
 }
 
 .button:hover {
@@ -89,43 +92,10 @@ form input {
 .text-red-600 {
   color: #e53e3e;
 }
-/* styles/globals.css */
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-table, th, td {
-  border: 1px solid #ddd;
-}
-
-th, td {
-  padding: 8px;
-  text-align: left;
-}
-
-th {
-  background-color: #f2f2f2;
-}
-
-button {
-  padding: 10px 15px;
-  margin: 5px;
-  font-size: 14px;
-  cursor: pointer;
-  background-color: #0070f3;
-  color: white;
-  border: none;
-  border-radius: 4px;
-}
-
-button:disabled {
-  background-color: #cccccc;
-  cursor: not-allowed;
-}
-
-button:hover:enabled {
-  background-color: #005bb5;
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Add spacing between buttons */
 }

@@ -1,0 +1,28 @@
+app
+    auth 3
+        sign-in 
+        sign-up
+        main.layout
+    demo 3
+        discover
+        create
+        organization
+        route-handlers
+        main.page
+    api 3
+        admin-editor
+        authTest
+        editor
+    authorization-playground 5
+        layout
+        page
+        post-actions
+        post-button
+        settings
+components 6
+    create-organization
+    custom-organization-profile
+    organization-list.tsx
+    require-active-organizatio
+    select-role
+    endpoint-tests
