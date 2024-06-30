@@ -3,6 +3,10 @@
 This project is a organizational management tool built with Next.js and Clerk for user authentication.   
 It demonstrates the use of Clerk's authentication features, public metadata, dynamic routing, and protected routes.
 
+<p align="center">
+  <img src="./architecture/flow.png" alt="Screenshot" width="800" />
+</p>
+
 ## Table of Contents
 - [Clerk Trial Project](#clerk-trial-project)
   - [Table of Contents](#table-of-contents)
@@ -29,7 +33,7 @@ This application allows users to view a list of organizations, create new organi
 
 ### Clerk Features / APIs Used
 - **Authentication**: Clerk's sign-up, sign-in, and user management APIs.
-- **User Data Management**: Clerk's APIs to manage and retrieve user information.
+- **User Public Data Management**: Clerk's APIs to manage and retrieve user information.
 - **Protected Routes**: Protect certain pages based on user roles and permissions.
 
 ## Features
