@@ -35,7 +35,6 @@ This application allows users to view a list of organizations, create new organi
 ## Features
 - Dynamic routing for organization profiles
 - User role-based access control
-- Simple and intuitive user interface
 - Secure authentication with Clerk
 
 ## Installation
@@ -60,6 +59,6 @@ If I were to extend this application into a more robust instance, I would consid
 
 1. **Enhanced User Roles and Permissions:** Implement a detailed user role system with varying levels of access and permissions.
 2. **Advanced Data Management:** Integrate a comprehensive backend system (e.g., PostgreSQL, MongoDB) for more complex queries and data relationships.
-3. **User Interactions and Notifications:** Add features for user interactions (comments, likes) and implement a notification system.
-4. **Performance Optimization:** Optimize the application for performance, including server-side rendering (SSR) and static site generation (SSG).
-5. **UI/UX Enhancements:** Continuously refine the user interface and user experience with design frameworks like Tailwind CSS or Material-UI.
+3. **Performance Optimization:** Optimize the application for performance, including server-side rendering (SSR) and static site generation (SSG).
+4. **UI/UX Enhancements:** Continuously refine the user interface and user experience with design frameworks like Tailwind CSS or Material-UI.
+5. **Implement more Clerk Features**: Use more of Clerk features including but not limited to authenticating across different domains, facilitating SSO for clients, and adding testing either with OTP or tokens.
