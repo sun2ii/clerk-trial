@@ -25,8 +25,9 @@ It demonstrates the use of Clerk's authentication features and components, publi
    git clone https://github.com/sun2ii/clerk-trial.git
    cd clerk-trial
    ```
-2. Run the app & open localhost:3000
+2. Install dependencies, run the app & open localhost:3000
    ```bash
+   npm install
    npm run dev 
    # open https://localhost:3000 on local browser
    ```
