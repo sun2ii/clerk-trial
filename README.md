@@ -4,7 +4,7 @@ This project is a organizational management tool built with Next.js and Clerk fo
 It demonstrates the use of Clerk's authentication features and components, public metadata, dynamic routing, and protected routes.
 
 <p align="center">
-  <img src="./architecture/flow.png" alt="Screenshot" width="800" />
+  <img src="./architecture/humblehr-flow.png" alt="Screenshot" width="800" />
 </p>
 
 ## Table of Contents
