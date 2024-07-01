@@ -1,6 +1,6 @@
 'use client';
-import '@/styles/globals.css'
-import { useAuth, SignInButton, SignUpButton, SignedIn, SignedOut, UserButton, RedirectToUserProfile } from '@clerk/nextjs'
+import '@/styles/globals.css';
+import { useAuth, SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import DashboardPage from "./DashboardPage";
@@ -14,20 +14,24 @@ function MyApp() {
       router.push('/onboarding');
     }
   }, [user, router]);
+
   return (
-      <main>
-        <SignedOut>
-          <h1>Welcome to HumbleHR</h1>
-          <SignInButton className="button" />
-          <SignUpButton  className="button"/>
-        </SignedOut>
-        <SignedIn>
-          <UserButton/>
-          <DashboardPage/>
-        {/* <RedirectToUserProfile /> */}
-        </SignedIn>
-      </main>
-  )
+    <main className="main-container">
+      <SignedOut>
+        <div className="signed-out-content">
+          <div className="auth-buttons">
+            <h1>Welcome to HumbleHR</h1>
+            <SignInButton className="button" />
+            <SignUpButton className="button" />
+          </div>
+        </div>
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+        <DashboardPage />
+      </SignedIn>
+    </main>
+  );
 }
 
 export default MyApp;

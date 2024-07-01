@@ -3,7 +3,7 @@
 
 const OrganizationMembers = () => {
   return (
-    <div>hello world</div>
+    <div>This should display member information</div>
   );
 };
 

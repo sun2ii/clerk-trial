@@ -82,7 +82,6 @@ form input {
   text-align: center;
   margin: 10px 0; /* Add margin to separate buttons */
   width: 100%; /* Make buttons full width */
-  max-width: 200px; /* Limit max width of buttons */
 }
 
 .button:hover {
