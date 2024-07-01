@@ -1,28 +1,40 @@
-app
-    auth 3
-        sign-in 
-        sign-up
-        main.layout
-    demo 3
-        discover
-        create
-        organization
-        route-handlers
-        main.page
-    api 3
-        admin-editor
-        authTest
-        editor
-    authorization-playground 5
-        layout
-        page
-        post-actions
-        post-button
-        settings
-components 6
-    create-organization
-    custom-organization-profile
-    organization-list.tsx
-    require-active-organizatio
-    select-role
-    endpoint-tests
+.
+├── public
+│   ├── dashboard.png
+│   ├── favicon.ico
+│   ├── next.svg
+│   ├── onboarding.png
+│   ├── organizations.png
+│   ├── signup_signin.png
+│   └── vercel.svg
+├── src
+│   ├── app
+│   │   ├── DashboardPage.tsx
+│   │   ├── layout.tsx
+│   │   ├── onboarding
+│   │   │   ├── _actions.ts
+│   │   │   └── page.tsx
+│   │   ├── organization
+│   │   │   └── [slug]
+│   │   │       ├── organization-members
+│   │   │       │   └── page.tsx
+│   │   │       └── page.tsx
+│   │   └── page.tsx
+│   ├── middleware.tsx
+│   └── styles
+│       ├── dashboard.css
+│       ├── globals.css
+│       └── onboarding.css
+│ -- CONFIGURATION --
+├── README.md
+├── tsconfig.json
+├── tailwind.config.ts
+├── next-env.d.ts
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── pnpm-lock.yaml
+├── postcss.config.mjs
+└── types
+    └── globals.d.ts
+
