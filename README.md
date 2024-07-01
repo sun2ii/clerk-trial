@@ -1,7 +1,7 @@
 # Clerk Trial Project
 
 This project is a organizational management tool built with Next.js and Clerk for user authentication.   
-It demonstrates the use of Clerk's authentication features, public metadata, dynamic routing, and protected routes.
+It demonstrates the use of Clerk's authentication features and components, public metadata, dynamic routing, and protected routes.
 
 <p align="center">
   <img src="./architecture/flow.png" alt="Screenshot" width="800" />
@@ -10,59 +10,51 @@ It demonstrates the use of Clerk's authentication features, public metadata, dyn
 ## Table of Contents
 - [Clerk Trial Project](#clerk-trial-project)
   - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
-    - [How Does It Work?](#how-does-it-work)
-    - [What Does It Do?](#what-does-it-do)
-    - [Clerk Features / APIs Used](#clerk-features--apis-used)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Approach](#approach)
-  - [Future Enhancements](#future-enhancements)
+- [Installation](#installation)
+- [Overview](#overview)
+  - [How Does It Work?](#how-does-it-work)
+  - [What Does It Do?](#what-does-it-do)
+  - [Clerk Features / API Used](#clerk-features--api-used)
+  - [Approach to the Problem](#approach-to-the-problem)
+  - [Future Extensions](#future-extensions)
 
-## Overview
-
-### How Does It Work?
-This application allows users to view a list of organizations, create new organizations, and access detailed profiles for each organization using dynamic routing. It uses Clerk for authentication to ensure secure access to the features.
-
-### What Does It Do?
-- **Onboarding**: When a user signs up, they are asked to submit their City, State and Birthday using Clerk's Public Metadata.
-- **Authentication**: Users can sign up and log in using Clerk's authentication system.
-- **View Organizations**: Users can view a list of organizations and navigate to each organization's profile page.
-- **Create Organization**: Users can create new organizations by providing relevant details.
-- **Organization Profiles**: Each organization has a unique profile page accessible via dynamic routing.
-
-### Clerk Features / APIs Used
-- **Authentication**: Clerk's sign-up, sign-in, and user management APIs.
-- **User Public Data Management**: Clerk's APIs to manage and retrieve user information.
-- **Protected Routes**: Protect certain pages based on user roles and permissions.
-
-## Features
-- Dynamic routing for organization profiles
-- User role-based access control
-- Secure authentication with Clerk
-
-## Installation
+# Installation
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/sun2ii/clerk-trial.git
    cd clerk-trial
    ```
+2. Run the app & open localhost:3000
+   ```bash
+   npm run dev 
+   # open https://localhost:3000 on local browser
+   ```
+# Overview
 
-## Approach
+## How Does It Work?
+This application is a simple organizational management tool built with Next.js and Clerk for user authentication from a mock company called HumbleHR.
 
-I approached this project by breaking down the requirements into manageable components and leveraging Clerk’s authentication and user management features. The implementation involved:
+## What Does It Do?
 
-1. Setting up the Next.js application and integrating Clerk.
-2. Creating dynamic routes for organization profiles.
-3. Using Clerk Components such as `<SignUp>`, `<SignIn>`, `<OrganizationProfile>`, `<UserProfile>` and `<Protect>`
-4. Setting up Public Metadata from `useUser()` and showcasing City, State, and Birthday to the user when they are logged in.
+-  **Authentication** - Users sign up and log in using Clerk’s authentication features.
+- **Onboarding** - Before users are fully signed up, they are required to enter their City, State, and Birthday.
+- **Homepage & Organization Profiles** - Once sign-up is complete, users are taken to a simple page that showcases the organizations they belong to, along with their role, city, state, and birthday. Each organization has its own profile (`<OrganizationProfile>`) and uses Next.js dynamic routing for access.
 
-## Future Enhancements
-If I were to extend this application into a more robust instance, I would consider the following enhancements:
+## Clerk Features / API Used
+- **Authentication Components**: `<SignUpButton>`, `<SignInButton>`, `<SignedOut>`, `<SignedIn>`, `<ClerkProvider>`
+- **Clerk UI Components**: `<UserButton>`, `<OrganizationList>`, `<OrganizationProfile>`, `<OrganizationProfile.Page>`, `<Protect>`
+- **API Used**: `clerkClient.users.updateUser()` for onboarding. A custom form on the frontend captures this information.
 
-1. **Enhanced User Roles and Permissions:** Implement a detailed user role system with varying levels of access and permissions.
-2. **Advanced Data Management:** Integrate a comprehensive backend system (e.g., PostgreSQL, MongoDB) for more complex queries and data relationships.
-3. **Performance Optimization:** Optimize the application for performance, including server-side rendering (SSR) and static site generation (SSG).
-4. **UI/UX Enhancements:** Continuously refine the user interface and user experience with design frameworks like Tailwind CSS or Material-UI.
-5. **Implement more Clerk Features**: Use more of Clerk features including but not limited to authenticating across different domains, facilitating SSO for clients, and adding testing either with OTP or tokens.
+
+## Approach to the Problem
+1. **Setup**: Initialized the Next.js application and integrated Clerk for authentication.
+2. **Research**: Explored Clerk’s blogs, documentation, GitHub, and Discord channels to gather insights for implementation.
+3. **Architect/Diagram**: Designed and diagrammed the desired workflow and application flow.
+4. **Implementation**: Developed the application based on the planned architecture.
+5. **Documentation**: Documented the entire process and implementation details in the README file upon completion.
+
+## Future Extensions
+- **Enhanced User Roles and Permissions**: Implement a more detailed user role system where different roles have varying levels of access and permissions within the application. This would involve using Clerk’s roles and permissions features more extensively.
+- **Advanced Data Management**: Integrate a more comprehensive backend system, possibly using a database like Supabase or Neon, to handle more complex queries and data relationships. This would support features such as filtering, sorting, and searching organizations based on various criteria.
+- **Enable Google Analytics for Clerk**: Track user interactions, analyze engagement, and better understand user demographics.

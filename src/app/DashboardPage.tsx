@@ -10,19 +10,14 @@ export default function DashboardPage() {
 
   return (
     <main className="main-container">
-      <div className="content">
         <div className="info-section">
-          <p>Your Organization: {orgSlug}</p>
-          <p>Your Role: {orgRole?.split(':')[1]}</p>
+          <div className="info">Your Organization: {orgSlug}</div>
+          <div className="info">Your Role: {orgRole?.split(':')[1]}</div>
           <div className="info">City: {city}</div>
           <div className="info">State: {state}</div>
           <div className="info">Birthday: {birthday}</div>
           <OrganizationList hidePersonal afterSelectOrganizationUrl="/organization/:slug" />
         </div>
-        <div className="image-section">
-          <img src="/dashboard.png" alt="Organization Architecture" />
-        </div>
-      </div>
     </main>
   );
 }

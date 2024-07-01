@@ -72,7 +72,6 @@ const Organization = () => {
         <div>
           <Link href="/">Homepage</Link>
         </div>
-        <img src="/organizations.png" alt="Organization Architecture" width={650} />
       </OrganizationProfile.Page>
     </OrganizationProfile>
   );
