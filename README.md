@@ -31,6 +31,15 @@ It demonstrates the use of Clerk's authentication features and components, publi
    npm run dev 
    # open https://localhost:3000 on local browser
    ```
+3.	Add the following environment variables to the .env file: 
+  ```bash
+  NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key_here
+  CLERK_SECRET_KEY=your_secret_key_here
+  ```
+
+Make sure to replace `your_publishable_key_here` and `your_secret_key_here` with your actual Clerk publishable and secret keys.
+
+	
 # Overview
 
 ## How Does It Work?
