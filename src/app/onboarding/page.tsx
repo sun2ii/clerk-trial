@@ -23,29 +23,29 @@ export default function OnboardingComponent() {
   };
 
   return (
-    <div class="container">
-  <h1 class="title">Welcome</h1>
-  <form class="form" onSubmit={(e) => { e.preventDefault(); handleSubmit(new FormData(e.currentTarget)); }}>
-    <div class="form-group">
+    <div className="container">
+  <h1 className="title">Welcome</h1>
+  <form className="form" onSubmit={(e) => { e.preventDefault(); handleSubmit(new FormData(e.currentTarget)); }}>
+    <div className="form-group">
       <label>Birthday</label>
-      <p class="description">Enter your birthdate.</p>
-      <input type="date" name="birthday" class="input" required />
+      <p className="description">Enter your birthdate.</p>
+      <input type="date" name="birthday" className="input" required />
     </div>
 
-    <div class="form-group">
+    <div className="form-group">
       <label>City</label>
-      <p class="description">Enter your city.</p>
-      <input type="text" name="city" class="input" required />
+      <p className="description">Enter your city.</p>
+      <input type="text" name="city" className="input" required />
     </div>
 
-    <div class="form-group">
+    <div className="form-group">
       <label>State</label>
-      <p class="description">Enter your state.</p>
-      <input type="text" name="state" class="input" required />
+      <p className="description">Enter your state.</p>
+      <input type="text" name="state" className="input" required />
     </div>
 
     {error && <p className="error">Error: {error}</p>}
-    <button type="submit" class="submit-btn">Submit</button>
+    <button type="submit" className="submit-btn">Submit</button>
   </form>
 </div>
   );
