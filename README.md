@@ -25,21 +25,30 @@ It demonstrates the use of Clerk's authentication features and components, publi
    git clone https://github.com/sun2ii/clerk-trial.git
    cd clerk-trial
    ```
-2. Install dependencies, run the app & open localhost:3000
+2. Add the following environment variables to the .env file: 
+    ```bash
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key_here
+    CLERK_SECRET_KEY=your_secret_key_here
+    ```
+    Make sure to replace `your_publishable_key_here` and `your_secret_key_here` with your actual Clerk publishable and secret keys.
+
+3. Clerk Configuration - Custom Session Token
+
+   Navigate to `https://dashboard.clerk.com/`  
+   On the left hand side, go to "**Configure**" -> "**Sessions**" -> "**Customize Session Token**" and click "**Edit**"   
+   Copy paste the json below to add `user.public_metadata` as a public session. More information on this [link](https://clerk.com/docs/guides/add-onboarding-flow).
+   ```json
+   {
+	"metadata": "{{user.public_metadata}}"
+   }
+   ```
+4. Install dependencies, run the app & open localhost:3000
    ```bash
    npm install
    npm run dev 
    # open https://localhost:3000 on local browser
    ```
-3.	Add the following environment variables to the .env file: 
-    ```bash
-    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key_here
-    CLERK_SECRET_KEY=your_secret_key_here
-    ```
 
-Make sure to replace `your_publishable_key_here` and `your_secret_key_here` with your actual Clerk publishable and secret keys.
-
-	
 # Overview
 
 ## How Does It Work?
