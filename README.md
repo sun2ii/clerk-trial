@@ -1,4 +1,4 @@
-# Clerk Trial Project
+# Add Custom Onboarding to your authentication flow
 
 This project is a organizational management tool built with Next.js and Clerk for user authentication.   
 It demonstrates the use of Clerk's authentication features and components, public metadata, dynamic routing, and protected routes.
